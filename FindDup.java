@@ -1,6 +1,7 @@
-/**
- * 
+//**
+ * @author raag
  */
+ 
 package Sequence;
 
 import java.io.BufferedReader;
@@ -13,9 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * @author raag
- */
+
 
 public class FindDup {
  
