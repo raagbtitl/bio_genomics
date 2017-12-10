@@ -64,7 +64,7 @@ public static void countDupChars(String str){
     
     if( line.equals(null))
     	 {
-        throw new IOException( fn + " is an empty file" );
+        throw new Exception( fn + " is an empty file" );
          }
     else {
     	 if( line.length()>0)
