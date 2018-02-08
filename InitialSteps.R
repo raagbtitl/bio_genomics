@@ -1,4 +1,4 @@
-rna <- rna <- read.table("KIRP.rnaseqv2__illuminahiseq_rnaseqv2__unc_edu__Level_3__RSEM_genes_normalized__data.data.txt",header=T,sep="\t",check.names = FALSE);
+rna <- rna <- read.table("anygeneexpressionfile.txt",header=T,sep="\t",check.names = FALSE);
 rna<-rna[!duplicated(rna[,1]),]; 
 rownames(rna)<-rna[,1];rna<-rna[,-1]
 rna<-as.matrix(rna)
