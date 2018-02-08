@@ -171,23 +171,8 @@ g <- ggplot(data=res, aes(x=res[,1], y=-log10(res$P.Val))) +
 
 g
 
-#### sc3######
-get_de_genes <- function(dataset, labels) {
-  tmp <- apply(dataset, 1, kruskal.test, g = factor(labels))
-  ps <- unlist(lapply(tmp, "[[", "p.value"))
-  ps <- p.adjust(ps)
-  return(ps)
-}
 
-support_vector_machines <- function(train, study, kern) {
-  train <- t(train)
-  labs <- factor(rownames(train))
-  rownames(train) <- NULL
-  model <- tryCatch(svm(train, labs, kernel = kern), error = function(cond) return(NA))
-  pred <- predict(model, t(study))
-  return(pred = pred)
-}
-
+#### from sc3 package ######
 reindex_clusters <- function(hc, k) {
   clusts <- stats::cutree(hc, k)
   labels <- names(clusts)
